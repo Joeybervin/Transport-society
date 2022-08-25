@@ -2,8 +2,13 @@
                                     GENERAL
    ========================================================================== */
 
-/* -- variables (fonts import + variables) -- */
+   /* == IMPORTATIONS == */
+
+/* variables (fonts import + variables) */
 @import url('./variables.css');
+
+/* animations */
+@import url('./animations.css');
 
 /* general style */
 html {
@@ -29,7 +34,7 @@ nav {
     align-items: center;
     width : 95%;
     height : 100%;
-    margin: 0 auto;
+    margin: 0 var(--horizontal-margin );
 }
 
 /* == LOGO == */
@@ -67,10 +72,11 @@ nav li a:hover {
 .dropdown-content {
     background-color: rgba(255, 255, 255, 0.418);
     -webkit-backdrop-filter: blur(100px);
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(5px);
     position: fixed;
     right: 0;
     top: calc(var(--nav-height));
+    z-index: 100;
 }
 .dropdown-content ul {
     display: flex;
@@ -92,10 +98,71 @@ div.country-choice-close {
     display:none;
 }
 
+/* ==========================================================================
+                                    HEADER
+   ========================================================================== */
 
 
-
-
+/* Hero image */
+.header-container {
+    height : 500px;
+    background: url('../assets/img/hero-images/hero-img-1.png') no-repeat left;
+    animation: heroFadeAnimation 25s infinite;
+    display: flex;
+}
+.header-container-content {
+    background-color: var(--primary-color);
+    width: 55vw;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    /* to change the form : https://bennettfeely.com/clippy/ */
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+    color: var(--font-secondary-color);
+}
+.header-container-content div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 var(--horizontal-margin );
+    gap : 25px;
+    width : 70%;
+}
+/* diagonals effect */
+.diagonal {
+    height: inherit;
+    background-color: var(--primary-color);
+    position: absolute;
+}
+.diagonal-1 {
+    clip-path: polygon(25% 0%, 27% 0, 2% 100%, 0% 100%);
+    width: 55vw;
+    left : calc(43vw);
+}
+.diagonal-2 {
+    clip-path: polygon(25% 0%, 26% 0, 1% 100%, 0% 100%);
+    width: 55vw;
+    left : calc(46vw);
+}
+/* text + button */
+h1 {
+    font-family: var(--ff-tittle);
+    font-size: clamp(1.8rem, 3vw + 0.5rem, var(--fs-h1));
+}
+.header-container-content p {
+    font-family: var(--ff-text);
+    font-size: clamp(0.8rem, 1vw + 0.3rem, var(--fs-h4));
+    line-height: calc(var(--fs-h4) * 1.5);
+}
+button {
+    cursor: pointer;
+    background-color: var(--button-background-secondary-color);
+    font-family: var(--ff-button);
+    border: none;
+    width : 306px;
+    height: 56px;
+}
 
 
 /* ================================================================================================================ */
@@ -106,10 +173,18 @@ div.country-choice-close {
 
 /* Responsive : tablet and small desktop */
 @media screen and (max-width:992px){
+    /* Hero image */
+    .header-container {
+        height : 500px;
+        background: url('../assets/img/hero-images/hero-img-1.png') no-repeat;
+        background-position: left;
+        display: flex;
+        overflow-y: hidden;
+    }
 }
 
 /* Responsive :  phone */
-@media screen and (max-width:767px){
+@media screen and (max-width:768px){
     /* Navigation */
 
     /* display the burger menu */
@@ -131,6 +206,7 @@ div.country-choice-close {
         right : -80vw;
         font-size: 1rem;
         transition: right 1s;
+        z-index: 99;
     }
     .nav-container-navigation-links ul {
         display: flex;

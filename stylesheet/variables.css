@@ -37,9 +37,11 @@
 
 
     /* -- margins -- */
+    --horizontal-margin : 2vw;
 
     /* -- buttons -- */
-    --button-background-color : #00A732;
+    --button-background-primary-color : #00A732;
+    --button-background-secondary-color : #fff;
     --buttons-height-max : 56px;
     --buttons-height-min : 56px;
     --buttons-width-max : 306px;

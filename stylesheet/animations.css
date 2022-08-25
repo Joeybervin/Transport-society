@@ -1,0 +1,6 @@
+@keyframes heroFadeAnimation { 
+    0% { background: url("../assets/img/hero-images/hero-img-1.png") no-repeat right; }
+    25% { background: url("../assets/img/hero-images/hero-img-2.png") no-repeat right; }
+    50% { background: url("../assets/img/hero-images/hero-img-3.png") no-repeat right; }
+    75% { background: url("../assets/img/hero-images/hero-img-4.png") no-repeat right; }
+    100% { background: url("../assets/img/hero-images/hero-img-1.png")  no-repeat right; } } 
