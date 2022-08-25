@@ -1,0 +1,218 @@
+/* =========
+    GENERAL 
+   ========== */
+
+/* -- Fonts family -- */
+/* Poppins */
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype")
+}
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype")
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("../assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype")
+}
+
+/* Mulish */
+@font-face {
+    font-family: "Mulish-Regular";
+    src: url("../assets/fonts/muli/Muli.ttf") format("truetype")
+}
+@font-face {
+    font-family: "Mulish-SemiBold";
+    src: url("../assets/fonts/muli/Muli-SemiBold.ttf") format("truetype")
+}
+
+
+/* -- Variables -- */
+
+:root {
+    /* -- colors -- */
+    --primary-color : #039F4E; /* greenPigment */
+
+
+    /* -- margins -- */
+
+    /* -- buttons -- */
+    --button-background-color : #00A732;
+    --buttons-height-max : 56px;
+    --buttons-height-min : 56px;
+    --buttons-width-max : 306px;
+    --buttons-width-min : 306px;
+
+    /* navigation sizes */
+    --nav-height-max : 115px;
+    --nav-height-min : 80px;
+    --nav-height: clamp(var(--nav-height-min), 15vw, var(--nav-height-max));
+
+    /* logo */
+    --logo-width-max : 90px;
+    --logo-width-min : 60px;
+
+    /* -- font -- */
+    /* size */
+    --fs-h1 : 48px;
+    --fs-h2 : 40px;
+    --fs-h3: 20px;
+    --fs-h4: 18px;
+    --fs-text : 16px;
+    --fs-text-xsmall : 12px;
+    /* font-family */
+    --ff-button : 'Mulish-SemiBold';
+    --ff-tittle : 'Poppins-Bold';
+    --ff-subtittle : 'Poppins-Bold';
+    --ff-text : 'Mulish-Regular';
+    --ff-text-footer: 'Poppins-Regular';
+    /* color */
+    --font-primary-color: #000;
+    --font-secondary-color: #fff;
+    --font-color-subtittle : var(--primary-color);
+    /* form */
+    --fs-form-input-label : 16px; 
+    --fs-form-input-text : 15px;
+    /* map */
+    --fs-map-title : 16px; 
+    --fs-map-text : 15px;
+    /* button */
+    --fs-button-text : 18px;
+    /* logo */
+    --fs-logo-text-max : 18px;
+
+
+}
+
+
+/* general styles */
+html {
+    font-size : 1em;
+    color: #000;
+}
+
+/* ================================================================================================================ */
+
+/* ================
+    NAVIGATION BAR 
+   ================ */
+
+/* == NAV == */
+
+nav {
+    background-color: aquamarine;
+    max-width: 100vw;
+    height : var(--nav-height);
+    font-family : "Poppins-SemiBold";
+    font-size: min( 1rem, 1vw);
+}
+nav div.nav-container {
+    background-color: rgb(46, 94, 18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 95%;
+    height : 100%;
+    margin: 0 auto;
+}
+
+/* == LOGO == */
+
+.logo-container {
+    background-color: rgb(18, 92, 94);
+}
+.logo-container, div.logo-container img  {
+    width : clamp(var(--logo-width-min), 10vw, var(--logo-width-max));
+}
+.logo-container p  {
+    font-size : min(2.5vw,var(--fs-logo-text-max));
+}
+
+/* navigation menu */
+
+.nav-container-navigation  {
+    background-color: rgb(133, 209, 89);
+    width: 85%;
+}
+
+nav ul  {
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a {
+    margin : 0 10px;
+}
+nav li > a:hover {
+    font-family : "Poppins-Bold";
+}
+.burger-menu-container {
+    display: none
+}
+
+
+/* ================================================================================================================ */
+
+/* ============
+    RESPONSIVE 
+   ============ */
+
+
+/* Responsive : tablet and small desktop 
+@media screen and (max-width:992px){
+    nav div.burger-menu-container {
+        display: block;
+        width : 50px;
+        height: 50px;
+    }
+}*/
+
+
+/* Responsive :  phone */
+@media screen and (max-width:767px){
+    /* Navigation */
+    nav::after {
+        content:"";
+        position: fixed;
+        right : 0;
+        height : 100vh;
+        width: 100vw;
+        z-index: -1;
+        background-color: rgba(0, 183, 255, 0.315);
+    }
+    .burger-menu-container {
+        display: block;
+        text-align: end;
+    }
+    nav ul {
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position : fixed;
+        gap : 40px;
+        top: calc(var(--nav-height));
+        height : calc(100vh - var(--nav-height));
+        width : 80vw;
+        right : 0;
+        font-size: 1rem;
+        /* to hide the side bar */
+        transition: transform 2s;
+        transform : translate(80vw)
+    }
+    .open-menu {
+        transform : translate(-80vw)
+    }
+    nav li a {
+        margin-right : 25px;
+        color : var(--font-secondary-color);
+    }
+    nav ul li:first-child {
+        margin-top : 70px ;
+    }
+    
+
+
+}

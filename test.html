@@ -20,6 +20,7 @@
 
     <!-- Nav bar -->
     <nav>
+
         <div class="nav-container">
             
             <!-- Logo -->
@@ -29,10 +30,19 @@
                     <p>Transport society</p>
                 </a>
             </div>
+
+            <!-- Burger menu : for mobile devices -->
             
-            
+
             <!-- Navigation menu -->
-            <div class="nav-container-navigation-links">
+            <div class="nav-container-navigation">
+                <div class="burger-menu-container">
+                <svg viewBox="0 0 100 70" width="35" height="30">
+                    <rect width="100" height="10" rx="5"></rect>
+                    <rect y="30" width="100" height="10" rx="5"></rect>
+                    <rect y="60" width="100" height="10" rx="5"></rect>
+                  </svg>
+            </div>
                 <ul>
                     <li><a href="#">Our vehicules</a></li>
                     <li><a href="#">About transport society</a></li>
@@ -43,54 +53,18 @@
                         <div class="country-choice">
                             <img src="assets/img/flags/south-africa.png" alt="country : South Afric">
                             <a href="#">South Africa</a>
-                            <img id="down-chevron" src="assets/img/icons/down-chevron.png" alt="for selecting the country of your choice">
+                            <img src="assets/img/chevron-down.png" alt="for selecting the country of your choice">
                         </div>
                         <div class="dropdown">
-                            <div class="dropdown-content">
-                                <!-- to close the country selections zone -->
-                                <div class="country-choice-close">
-                                    <img src="assets/img/icons/left-chevron.png" alt="go back on navigation menu" />
-                                    <p>return</p>
-                                </div>
-                                <!-- countries list -->
-                                <ul>
-                                    <li>
-                                        <!-- France -->
-                                        <div>
-                                            <img src="assets/img/flags/france.png" alt="France">
-                                            <a href="#">France</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!-- South Korea -->
-                                        <div>
-                                            <img src="assets/img/flags/south-korea.png" alt="country :  South Korea">
-                                            <a href="#">South Korea</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!-- USA -->
-                                        <div>
-                                            <img src="assets/img/flags/united-states.png" alt="country :  USA">
-                                            <a href="#">USA</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                            <!-- <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div> -->
                         </div>
                     </li>
                 </ul>
             </div>
-
-            <!-- Burger menu svg : for small devices devices -->
-            <div class="burger-menu-container">
-                <svg viewBox="0 0 100 70" width="35" height="30">
-                    <rect width="100" height="10" rx="5"></rect>
-                    <rect y="30" width="100" height="10" rx="5"></rect>
-                    <rect y="60" width="100" height="10" rx="5"></rect>
-                </svg>
-            </div>
-
         </div>
     </nav>
 

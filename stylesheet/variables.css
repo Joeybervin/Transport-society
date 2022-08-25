@@ -1,0 +1,87 @@
+/* ==========================================================================
+                                    FONT FAMILY
+   ========================================================================== */
+
+/* -- Poppins -- */
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype")
+}
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype")
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("../assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype")
+}
+
+/* -- Mulish -- */
+@font-face {
+    font-family: "Mulish-Regular";
+    src: url("../assets/fonts/muli/Muli.ttf") format("truetype")
+}
+@font-face {
+    font-family: "Mulish-SemiBold";
+    src: url("../assets/fonts/muli/Muli-SemiBold.ttf") format("truetype")
+}
+
+
+/* ==========================================================================
+                                    VARIABLES
+   ========================================================================== */
+
+:root {
+    /* -- colors -- */
+    --primary-color : #039F4E; /* greenPigment */
+
+
+    /* -- margins -- */
+
+    /* -- buttons -- */
+    --button-background-color : #00A732;
+    --buttons-height-max : 56px;
+    --buttons-height-min : 56px;
+    --buttons-width-max : 306px;
+    --buttons-width-min : 306px;
+
+    /* navigation sizes */
+    --nav-height-max : 115px;
+    --nav-height-min : 80px;
+    --nav-height: clamp(var(--nav-height-min), 15vw, var(--nav-height-max));
+
+    /* -- logo -- */
+    --logo-width-max : 90px;
+    --logo-width-min : 65px;
+
+    /* -- font -- */
+
+    /* size */
+    --fs-h1 : 3rem; /* 48px */
+    --fs-h2 : 2.5rem; /* 40px */
+    --fs-h3: 1.25rem; /* 20px */
+    --fs-h4: 1.125rem; /* 18px */
+    --fs-text : 1rem; /* 16px */
+    --fs-text-xsmall : 0.75rem; /* 12px */
+    /* font-family */
+    --ff-button : 'Mulish-SemiBold';
+    --ff-tittle : 'Poppins-Bold';
+    --ff-subtittle : 'Poppins-Bold';
+    --ff-text : 'Mulish-Regular';
+    --ff-text-footer: 'Poppins-Regular';
+    /* color */
+    --font-primary-color: #000;
+    --font-secondary-color: #fff;
+    --font-color-subtittle : var(--primary-color);
+    /* form */
+    --fs-form-input-label : 1rem; /* 16px */ 
+    --fs-form-input-text : 0.938rem ; /* 15px */
+    /* map */
+    --fs-map-title : 1rem; /* 16px */
+    --fs-map-text : 0.938rem ; /* 15px */
+    /* button */
+    --fs-button-text : 1.125rem; /* 18px */
+    /* logo */
+    --fs-logo-text-max : 1.125rem; /* 18px */
+
+}
