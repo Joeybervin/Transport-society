@@ -37,13 +37,15 @@
     --secondary-color: #F7FCF9; /* Baby Powder */
 
     --grayWeb : #7B7D7C; /* Gray Web */
-
+    --jet : #393939; /* Jet */
+    --quickSilver : #A5A5A5; /* Quick Silver */
+    --greenPantone : #00A732; /* Green Pantone */
 
     /* -- margins -- */
     --horizontal-margin : 2vw;
 
     /* -- buttons -- */
-    --button-background-primary-color : #00A732;
+    --button-background-primary-color : var(--greenPantone);
     --button-background-secondary-color : #fff;
     --buttons-height-max : 56px;
     --buttons-height-min : 56px;
@@ -88,5 +90,9 @@
     --fs-button-text : 1.125rem; /* 18px */
     /* logo */
     --fs-logo-text-max : 1.125rem; /* 18px */
+    /* informations */
+    --fs-infos : 1.125rem; /* 18px */
+    /* form titles */
+    --fs-form-title : 1.125rem; /* 18px */
 
 }

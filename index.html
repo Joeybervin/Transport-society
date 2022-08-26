@@ -371,10 +371,114 @@
         </section>
 
         <!-- Contact us -->
-        <section>
-            <header>
-                <h2></h2>
-            </header>
+        <section id="contact">
+            <div class="contact-container">
+                <!-- infos contact -->
+
+                <div class="contact-infos">
+                    <header>
+                        <h2>Contact us</h2>
+                    </header>
+                    <img src="assets/img/truck.png" alt="">
+                    <p>For more information, please don’t hesitate to get in touch with William :</p>
+                    <ul>
+                        <li>William Racinne – Country Director</li>
+                        <li><a href="tel:+27721341225">Telephone:  +27 72 134 1225</a></li>
+                        <li><a href="mailto: wracinne@transportsociety.co.za">Email : wracinne@transportsociety.co.za</a></li>
+                        <li><a href="#" target="_blank">Twitter : @WilliamRacinne</a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- form -->
+                <form action="#" method="post">
+                    <div>
+                        <div class="double-fields">
+                            <!-- Profile -->
+                            <div class="field profile-container">
+                                <legend>Profile</legend>
+                                <div>
+                                    <input type="radio" id="Consumer" name="Consumer" value="Consumer">
+                                    <label for="profile">Consumer.</label>
+                                    <input type="radio" id="Professionnal" name="Professionnal" value="Professionnal">
+                                    <label for="profile">Professionnal.</label>
+                                </div>
+                            </div>
+                            <!-- Title -->
+                            <div class="field title-container">
+                                <legend>Title</legend>
+                                <div>
+                                    <input type="radio" id="M" name="M" value="M">
+                                    <label for="profile">M.</label>
+                                    <input type="radio" id="Mrs" name="Mrs" value="Mrs">
+                                    <label for="profile">Mrs.</label>
+                                </div>
+                            </div>
+                            <!-- Forename -->
+                            <div class="field forename-container">
+                                <label for="Forename">Forename</label>
+                                <input type="text" id="forename" name="forename">
+                            </div>
+                            <!-- Surname -->
+                            <div class="field surmame-container">
+                                <label for="surmame">Surmame</label>
+                                <input type="text" id="surmame" name="surmame">
+                            </div>
+                            <!-- Company name -->
+                            <div class="field companyName-container">
+                                <label for="companyName">Company name</label>
+                                <input type="text" id="companyName" name="companyName">
+                            </div>
+                            <!-- Job title -->
+                            <div class="field jobTitle-container">
+                                <label for="jobTitle">Job title</label>
+                                <input type="text" id="jobTitle" name="jobTitle">
+                            </div>
+                        </div>
+                        
+                            <!-- Email adress -->
+                            <div class="field email-container">
+                                <label for="email">Email adress</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+
+                            <div class="double-fields">
+                                <!-- Telephone -->
+                            <div class="field telephone-container">
+                                <label for="jobTitle">Telephone</label>
+                                <input type="tel" id="telephone" name="telephone">
+                            </div>
+                            <!-- Country -->
+                            <div class="field country-container">
+                                <label for="country">Country</label>
+                                <select name="country" id="country">
+                                    <option value="">South Africa</option>
+                                    <option value="dog">France</option>
+                                    <option value="cat">South-Korea</option>
+                                    <option value="hamster">USA</option>
+                                </select>
+                            </div>
+                            </div>
+                            <!-- Message -->
+                            <div class="field message-container">
+                                <label for="message">Message</label>
+                                <input placeholder="Your message" type="text" id="message" name="message">
+                            </div>
+
+                    </div>
+                    <div class="field conditions-container">
+                        <input type="checkbox" id="conditions" name="conditions">
+                        <label for="conditions">Cochez cette case si, au-delà de la réponse à votre demande d'information, vous souhaitez recevoir d'autres communications de notre part.*</label>
+                    </div>
+                    <button type="submit">Submit</button>
+
+
+                </form>
+
+
+
+            </div>
         </section>
 
         <!-- Cartes -->
