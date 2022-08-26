@@ -350,7 +350,86 @@ section {
     width: 100%;
 
 }
+/* ==========================================================================
+                                    FULL SERVICE
+   ========================================================================== */
 
+#full-service {
+    
+    position:relative;
+    width: 100vw;
+
+}
+
+
+.deco-diagonal-2 {
+    position: absolute;
+    background-color: var(--secondary-color);
+    width : clamp(200px, 45vw, 310px);
+    height : 100%;
+    clip-path: polygon(0 0, 100% 0, 29% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 24% 100%, 0 100%);
+    z-index: -1;
+    
+}
+#full-service img {
+    position: absolute;
+    margin-top: 30px;
+    width : clamp(200px, 35vw, 700px);
+    z-index: -1;
+    bottom: 0;
+}
+.deco-diagonal-2-1 {
+    background-color: var(--secondary-color);
+    clip-path: polygon(77% 0%,80% 0, 3% 100%, 1% 100%);
+    width : clamp(200px, 45vw, 310px);
+    left : max(7vw, 55px);
+}
+.deco-diagonal-2-2 {
+    background-color: var(--secondary-color);
+    clip-path: polygon(77% 0%, 79% 0, 2% 100%, 0% 100%);
+    width : clamp(200px, 45vw, 310px);
+    left : max(10vw, 70px);
+}
+
+.full-service-container {
+    width: 100vw;
+    position: relative;
+    top : 0;
+    background-color: var(--primary-color);
+    display: flex;
+    z-index:-3; 
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.full-service-container > div {
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+    color: var(--font-secondary-color);
+    justify-content: flex-start;
+}
+.full-service-container header {
+    margin : 50px 0 30px 0;
+}
+.services-container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.service {
+    flex: 30%;
+    margin: 0 50px 50px 0;
+}
+.services-container h3 {
+    color: var(--font-secondary-color);
+}
+#full-service button {
+    z-index: 20;
+    margin-bottom : 40px;
+}
 /* ==========================================================================
                                     FOOTER
    ========================================================================== */
@@ -543,5 +622,22 @@ section {
 .expertises-container-bottom > div {
     text-align: start;
 }
+
+/* ==========================================================================
+                                FULL SERVICE
+========================================================================== */
+
+.deco-diagonal-2, .deco-diagonal-2-1,.deco-diagonal-2-2 {
+   background-color: rgba(247, 252, 249, 0.3);
+}
+.full-service-container > div {
+    width : 100vw;
+}
+#full-service button {
+    margin-right :  20px;
+    width : 90vw;
+    margin-bottom : 40px;
+}
+
 
 }
