@@ -33,8 +33,10 @@
 
 :root {
     /* -- colors -- */
-    --primary-color : #039F4E; /* greenPigment */
-    --secondary-color: #F7FCF9; /*  */
+    --primary-color : #039F4E; /* Green Pigment */
+    --secondary-color: #F7FCF9; /* Baby Powder */
+
+    --grayWeb : #7B7D7C; /* Gray Web */
 
 
     /* -- margins -- */

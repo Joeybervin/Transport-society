@@ -17,6 +17,26 @@ html {
     overflow-x: hidden;
 }
 
+h1 {
+    font-family: var(--ff-tittle);
+    font-size: clamp(1.8rem, 3vw + 0.5rem, var(--fs-h1));
+}
+h2 {
+    font-family: var(--ff-tittle);
+    font-size: clamp(1.5rem, 2vw + 0.7rem, 2.5rem);
+    line-height: 3.75rem ;
+} /* A REVOIR */
+h3 {
+    font-family: var(--ff-subtittle);
+    color: var(--font-color-subtittle);
+    font-size: clamp(0.938rem, 1vw + 0.5rem, 1.25rem);
+    line-height: 1.875rem;
+}
+p {
+    font-family: var(--ff-text);
+    font-size: clamp(0.9rem, 2vw - 0.5rem, 1rem);
+}
+
 /* ==========================================================================
                                     NAVIGATION BAR
    ========================================================================== */
@@ -57,7 +77,6 @@ nav ul  {
     align-items: center;
     gap : 10px;
 }
-
 nav li a:hover {
     font-family : "Poppins-Bold";
 }
@@ -103,7 +122,6 @@ div.country-choice-close {
                                     HEADER
    ========================================================================== */
 
-
 /* Hero image */
 .header-container {
     height : 500px;
@@ -147,10 +165,6 @@ div.country-choice-close {
     left : calc(46vw);
 }
 /* text + button */
-h1 {
-    font-family: var(--ff-tittle);
-    font-size: clamp(1.8rem, 3vw + 0.5rem, var(--fs-h1));
-}
 .header-container-content p {
     font-family: var(--ff-text);
     font-size: clamp(0.8rem, 1vw + 0.3rem, var(--fs-h4));
@@ -168,6 +182,7 @@ button {
 /* ==========================================================================
                                     VEHICULES
    ========================================================================== */
+
 section {
     margin-top : max(5vw, 100px)
 }
@@ -186,16 +201,13 @@ section {
     flex-wrap: wrap;
     gap : 100px;
 }
-h2 {
-    font-family: var(--ff-tittle);
-    font-size: clamp(1.5rem, 2vw + 0.7rem, 2.5rem);;
-}
+
 /* product container */
 .product-container {
     background-color: var(--primary-color) ;
     display: flex;
     flex-direction: column;
-    width : clamp(185px, 30vw , 305px);
+    width : clamp(165px, 30vw , 305px);
     height : clamp(153px, 24vw , 223px);
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(221, 221, 221, 0.5);
@@ -229,6 +241,65 @@ h2 {
 }
 
 /* ==========================================================================
+                                    ABOUT
+   ========================================================================== */
+
+#about > div {
+    max-width: 100vw;
+}
+#about > div {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    margin: 0 var(--horizontal-margin );
+}
+.about-container {
+    width : clamp(45vw,100vw, 600px);
+    margin: 0 auto;
+}
+.about-container-expertises {
+    display: flex;
+    flex-direction: column;
+    gap : 14px;
+    margin-bottom: 5rem;
+}
+.about-container-expertises h3 {
+    width : 50%;
+}
+.about-container-expertises p {
+    width : 80%;
+    line-height: 1.25rem;
+}
+.about-container-numbers > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top : 18px;
+}
+.about-container-numbers > div > div {
+    flex : 30%;
+    margin: 0 0 20px 0;
+}
+.about-container-numbers p:first-child {
+    font-size: clamp(0.875rem, 1vw + 1rem, 1.563rem);
+}
+.about-container-numbers p:last-child {
+    color:var(--grayWeb);
+    font-size: clamp(0.625rem, 2vw - 0.5rem, 1rem);
+}
+.about-img-container {
+    margin: 0 auto;
+    max-width : 90vw;
+}
+.about-img-container img {
+    max-width: 100%;
+}
+
+
+
+
+
+
+/* ==========================================================================
                                     FOOTER
    ========================================================================== */
 
@@ -236,12 +307,10 @@ h2 {
     max-width: 100vw;
     font-family: var(--ff-text-footer);
 }
-
 .footer-container-legal-mention , .footer-container-policy {
     display: flex;
     align-items: center;
 }
-
 .footer-container-legal-mention {
     background-color: #F7FCF9 ;
     font-size: var(--fs-text-xsmall);
@@ -288,6 +357,15 @@ h2 {
 
 /* Responsive : tablet and small desktop */
 @media screen and (max-width:992px){
+    /* ==========================================================================
+                                    GENERAL
+   ========================================================================== */
+    h2 {
+        line-height: 2.75rem;
+    }
+    /* ==========================================================================
+                                    HEADER
+   ========================================================================== */
     /* Hero image */
     .header-container {
         height : 500px;
@@ -298,6 +376,20 @@ h2 {
     }
     .legal-mention-text {
         width: 100%;
+    }
+
+    /* ==========================================================================
+                                    ABOUT
+   ========================================================================== */
+
+    .about-container-expertises h3 {
+        width : 100%;
+    }
+    .about-container-expertises p {
+        width : 100%;
+    }
+    #about header {
+        margin-top : 25px; 
     }
 }
 
