@@ -442,7 +442,6 @@ section {
 }
 .contact-infos {
     margin-bottom :50px;
-    text-align: center;
 }
 .contact-infos p {
     font-family: var(--ff-subtittle);
@@ -567,14 +566,69 @@ input, select {
                                     Cartes
    ========================================================================== */
 #cartes-container {
-    width :100vw;
+    max-width :100vw;
+    position: relative;
 }
-#map {
-    width: 100%;
-    height: 400px;
-    background-color: grey;
-  }
+iframe {
+    position: relative;
+}
+.agences-container p, .agences-container a {
+    font-family: var(--ff-text);
+    font-size: 15px;
+}
 
+.agences-container {
+    background-color: #fff;
+    position: absolute;
+    top : 50px;
+    left : min(2vw, 40px);
+    z-index:1;
+    display: flex;
+    flex-direction: column;
+}
+.adress-header {
+    cursor: pointer;
+    width: 100%;
+    background-color: #F3F3F3 ;
+}
+.agences-container header {
+    
+    padding : 20px;
+}
+.agences-container header, .adress > div {
+    display: flex;
+    flex-direction: column;
+}
+.adress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 20px;
+}
+.adress:hover {
+    background-color: var(--primary-color) ;
+    color: #fff
+}
+p.town, header p:first-child {
+    font-family: var(--ff-subtittle);
+}
+div.adress div > .town {
+    font-size: 16px;
+}
+header p:first-child {
+    font-size: 20px;
+}
+.adress:nth-child(3) {
+    border-top: 1px solid #ECECEC;
+    border-bottom: 1px solid #ECECEC ;
+}
+.adress img {
+    height : calc(100% / 2);
+    margin-left: 30px;
+}
+.close {
+   display: none;
+}
 /* ---------------------------------------------------------------------------------------------------------------- */
 /* 
 /* ================================================================================================================ */
@@ -641,6 +695,7 @@ input, select {
     .nav-container-navigation-links.open {
         right : 0;
         transition: right 1s;
+        
     }
     .nav-container-navigation-links {
         background-color: var(--primary-color);
@@ -741,7 +796,11 @@ input, select {
 ========================================================================== */
 .contact-container {
     flex-wrap: wrap;
-    
+}
+.contact-infos {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 }

@@ -30,3 +30,13 @@ document.querySelector('div.country-choice-close').addEventListener('click', ()=
 
 })
 
+const adressList =  document.querySelectorAll('.adress')
+console.log(adressList)
+/* To see the map on mobile device and close the agencies boxes */
+document.querySelector('.adress-header header').addEventListener('click', ()=>{  
+   
+    for (const adress of adressList) {
+        adress.classList.toggle('close')
+    }
+  })
+  
